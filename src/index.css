@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#css {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-image: linear-gradient(to right, #605f5f, #000);
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+#css .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  color: #FFF;
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 460px) {
+  #css {
+    grid-template-columns: repeat(1, auto);
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  #css .box {
+    font-size: 2rem;
+  }
+}
+
+@media ((min-width: 461px) and (max-width: 640px)) {
+  #css {
+    grid-template-columns: repeat(1, auto);
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  #css .box {
+    font-size: 2rem;
+  }
+}
+
+@media ((min-width: 641px) and (max-width: 800px)) {
+  #css {
+    grid-template-columns: repeat(2, auto);
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  #css .box {
+    font-size: 2rem;
+  }
+
+  .last {
+    grid-column: span 2;
+  }
+}
